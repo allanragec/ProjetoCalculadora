@@ -47,9 +47,7 @@ public class conexao {
 			}
 
 		} catch (Exception e) {
-
-			// nomelabel.setText(e.getMessage());
-
+			//Tratamento caso dê erro no pareamento e.getMessage()
 		}
 	}
 
@@ -58,10 +56,8 @@ public class conexao {
 			IllegalArgumentException, IllegalAccessException,
 			InvocationTargetException {
 		 mmDevice = device;
-
 		// Force a BluetoothSocket for a connection with the
 		// given BluetoothDevice
-
 		m = mmDevice.getClass().getMethod("createRfcommSocket",
 				new Class[] { int.class });
 		mmSocket = (BluetoothSocket) m.invoke(mmDevice,
